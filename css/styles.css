@@ -1,0 +1,186 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    width: 100%;
+}
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(192, 100%, 9%); }
+/* ----- Navbar ----- */
+.navbar {
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin: 3% 5%;
+}
+.navbar-button {
+    background: none;
+    border: 1px solid;
+    border-radius: 25px;
+    color: hsl(322, 100%, 66%);
+    padding: 0.5rem 2rem;
+    position: absolute;
+    right:0;
+}
+.navbar-button:hover {
+    color: hsl(321, 100%, 78%);
+    cursor: pointer;
+}
+/* ----- Grid Layout and spacing ----- */
+.column {text-align: center; padding: 5%;}
+.row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    padding: 4rem 5%;
+}
+.item { justify-self: center; padding: 5%;}
+.item-right {grid-area: item-right;}
+.item-left {grid-area: item-left;}
+.section3, .section5, .section7 {
+    grid-template-areas: "item-left item-right";
+    position: relative;
+}
+.section2, .section4, .section6 {
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+}
+.section2 {padding-top: 3rem;}
+/* ----- Buttons ----- */
+.btn { 
+    background-color: hsl(322, 100%, 66%);
+    border: none;
+    color: #fff;
+}
+.btn:hover {
+    background-color: hsl(321, 100%, 78%);
+    cursor: pointer;
+}
+.btn-starter {
+    border-radius: 25px;
+    box-shadow: 0px 2px 5px 2px rgb(216, 198, 198);
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+}
+.btn-subscribe {
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+}
+/* ----- Section 1 ----- */
+.img-screen {margin: 3rem auto 0; width: 75%;}
+.heading {font-size: 38px;}
+.section1 p {
+    width: 50%;
+    margin: 1rem auto;
+}
+/* ----- Section 2 ------ */
+.big-number {
+    font-size: 64px;
+    margin: 0;
+}
+.icon-color { 
+    display: block;
+    width: 2rem;
+}
+.section2 { text-align: center;}
+.section2 p {
+    font-weight: 500;
+    margin-top: 0;
+    opacity: 50%;
+    text-transform: uppercase;
+}
+/* ------ Section 3, Section 4, Section 5 ----- */
+.illustration, .middle-section {width: 75%;}
+.section3, .section5 {
+    background-color: hsl(207, 100%, 98%);
+}
+/* ----- Section 7 -----*/
+input {
+    border: none;
+    border-radius: 5px;
+    margin: 1rem 1rem 0 0;
+    padding: 0.5rem 0;
+    width: 50%;
+}
+input:invalid {
+    border: solid 1px hsl(0, 100%, 63%);
+    color: hsl(0, 100%, 63%);
+}
+.icon-white {
+    float: left;
+    margin-right: 1rem; 
+    margin-top: 0.25rem;
+}
+.logo-white {filter: brightness(0) invert(1);}
+.section7 {
+    color: #fff;
+    align-items: initial;
+    background-color: hsl(192, 100%, 9%);
+}
+.section7 h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+.social {padding-top: 3rem; justify-self: left;}
+.social a {
+    color: #fff;
+    padding-right: 1rem;
+}
+.social a:hover { color: hsl(322, 100%, 66%);}
+.text-section7 {
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+    width: 60%;
+}
+/* ----- Images curved sections ----- */
+.img-dk, .img-mb { 
+    position: absolute;
+    width: 100%;
+}
+.img-mb { display: none;}
+.top {
+    top: 0;
+    transform: translate(0, -99%);
+}
+.bottom {
+    bottom: 0;
+    transform: translate(0, 99%);
+}
+/* ----- Responsivness ----- */
+@media screen and (max-width: 1200px) {
+    .middle-section h1 {font-size: 24px;}
+    .section1 p {
+        font-weight: 500;
+        width: 75%;
+        margin: 1rem auto;
+    }
+    .text-section7{ width: 75%;}
+}
+@media screen and (max-width: 854px) {
+    form {text-align: right;}
+    .btn-subscribe {
+        margin: 1rem 0 2rem;
+        width: 50%;
+    }
+    .heading {font-size: 32px;}
+    .img-dk { display: none;}
+    .img-mb { display: block;}
+    .img-screen {width: 100%;}
+    .middle-section {
+        text-align: center;
+        width: auto;
+    }
+    .row {grid-template-columns: auto;}
+    .section1 p {
+        width: auto;
+        margin: 1rem auto 2rem;
+    }
+    .section3, .section5, .section7 {
+        grid-template-areas: "item-right" "item-left";
+    }
+    .text-section7,input {width: 100%;}
+}
